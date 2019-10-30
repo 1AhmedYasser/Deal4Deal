@@ -70,6 +70,7 @@
 		88EF882A2333872F00F34B04 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EF88292333872F00F34B04 /* Slide.swift */; };
 		88EF882C23338E8C00F34B04 /* muli in Resources */ = {isa = PBXBuildFile; fileRef = 88EF882B23338E8C00F34B04 /* muli */; };
 		88EF882E2333BFD100F34B04 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EF882D2333BFD100F34B04 /* SignUpViewController.swift */; };
+		94183335236A43ED00BF6D09 /* deal4dealsplash.gif in Resources */ = {isa = PBXBuildFile; fileRef = 94183334236A43ED00BF6D09 /* deal4dealsplash.gif */; };
 		A0F9C2C54D6B192221735B00 /* Pods_Deal4DealTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BF78759AC4A6939FB0134D2 /* Pods_Deal4DealTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -164,6 +165,7 @@
 		88EF882B23338E8C00F34B04 /* muli */ = {isa = PBXFileReference; lastKnownFileType = folder; path = muli; sourceTree = "<group>"; };
 		88EF882D2333BFD100F34B04 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		9115E8B0246E034AAD58E1E4 /* Pods-Deal4DealTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Deal4DealTests.debug.xcconfig"; path = "Target Support Files/Pods-Deal4DealTests/Pods-Deal4DealTests.debug.xcconfig"; sourceTree = "<group>"; };
+		94183334236A43ED00BF6D09 /* deal4dealsplash.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = deal4dealsplash.gif; sourceTree = "<group>"; };
 		9BF78759AC4A6939FB0134D2 /* Pods_Deal4DealTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Deal4DealTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6B932B4337B1038DDB03DFC /* Pods-Deal4DealUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Deal4DealUITests.release.xcconfig"; path = "Target Support Files/Pods-Deal4DealUITests/Pods-Deal4DealUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C7B00DBE3D6696630A545F73 /* Pods-Deal4DealUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Deal4DealUITests.debug.xcconfig"; path = "Target Support Files/Pods-Deal4DealUITests/Pods-Deal4DealUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 			children = (
 				880682F42345F74400E24E1B /* Utils */,
 				8809B994232FA6CC00F29B57 /* Info.plist */,
+				94183334236A43ED00BF6D09 /* deal4dealsplash.gif */,
 				8809B9B8232FACAB00F29B57 /* Model */,
 				8809B9B7232FAC9A00F29B57 /* View */,
 				8809B9B9232FACBC00F29B57 /* Controller */,
@@ -509,6 +512,7 @@
 			files = (
 				46380C8723429E9B00FCB0C2 /* Cart.storyboard in Resources */,
 				88EA7322234CB8E800A8725D /* MainCell.xib in Resources */,
+				94183335236A43ED00BF6D09 /* deal4dealsplash.gif in Resources */,
 				88EF8828233386FD00F34B04 /* Slide.xib in Resources */,
 				46380C8B23429EC500FCB0C2 /* Profile.storyboard in Resources */,
 				8809B993232FA6CC00F29B57 /* LaunchScreen.storyboard in Resources */,
