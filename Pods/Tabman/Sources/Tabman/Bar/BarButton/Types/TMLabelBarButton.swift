@@ -124,11 +124,11 @@ open class TMLabelBarButton: TMBarButton {
         label.text = Defaults.text
         label.font = self.font
         if #available(iOS 13, *) {
-            tintColor = label.tintColor
+            tintColor = .label
         } else {
             tintColor = .black
         }
-        selectedTintColor = .blue
+        selectedTintColor = .systemBlue
         contentInset = Defaults.contentInset
         
         calculateFontIntrinsicContentSize(for: label.text)

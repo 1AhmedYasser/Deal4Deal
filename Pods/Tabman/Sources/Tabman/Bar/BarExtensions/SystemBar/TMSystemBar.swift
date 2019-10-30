@@ -78,7 +78,7 @@ public final class TMSystemBar: UIView {
         self.bar = bar
         
         if #available(iOS 13, *) {
-            backgroundStyle = .blur(style: .regular)
+            backgroundStyle = .blur(style: .systemMaterial)
         } else {
             backgroundStyle = .blur(style: .extraLight)
         }

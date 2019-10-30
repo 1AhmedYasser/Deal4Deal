@@ -24,14 +24,12 @@ class SliderCell: UICollectionViewCell {
 }
 class CampaignCell: UICollectionViewCell {
     
-    @IBOutlet weak var campaignButton: UIButton!
+ 
+    @IBOutlet weak var campaignLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         setupCampaignCardEffect()
-        campaignButton.backgroundColor = .clear
-        campaignButton.layer.cornerRadius = 5
-        campaignButton.layer.borderWidth = 1
-        campaignButton.layer.borderColor = UIColor.clear.cgColor
+   
     }
     
     func setupCampaignCardEffect() {

@@ -18,6 +18,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         homeScroller.contentSize.height = 1.0
+        campaignCollectionView.allowsMultipleSelection = false
     }
     
 }
@@ -44,7 +45,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         return sliderCell
         } else if collectionView == campaignCollectionView {
          let campaignCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CampaignCell", for: indexPath) as! CampaignCell
-    
+        
          return campaignCell
         } else {
           let campaignItemCell = CampaignItemsCollectionView.dequeueReusableCell(withReuseIdentifier: "CampaignItemCell", for: indexPath)
@@ -53,7 +54,20 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-           print("hi1")
+        if collectionView == campaignCollectionView {
+            let cell = collectionView.cellForItem(at: indexPath) as! CampaignCell
+            cell.layer.borderColor = UIColor.red.cgColor
+            cell.layer.borderWidth = 1
+            cell.campaignLabel.textColor = UIColor.red
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        if collectionView == campaignCollectionView {
+            let cell = collectionView.cellForItem(at: indexPath) as! CampaignCell
+            cell.layer.borderWidth = 0
+            cell.campaignLabel.textColor = UIColor.gray
+        }
     }
     
 }

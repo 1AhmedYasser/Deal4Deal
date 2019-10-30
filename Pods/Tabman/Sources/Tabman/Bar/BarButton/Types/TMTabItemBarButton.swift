@@ -124,11 +124,11 @@ open class TMTabItemBarButton: TMBarButton {
         imageHeight.isActive = true
         
         if #available(iOS 13, *) {
-            tintColor = label.tintColor
+            tintColor = .label
         } else {
             tintColor = .black
         }
-        selectedTintColor = .blue
+        selectedTintColor = .systemBlue
         font = defaultFont(for: .current)
         label.text = "Item"
         label.textAlignment = .center
