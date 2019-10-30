@@ -71,6 +71,7 @@
 		88EF882C23338E8C00F34B04 /* muli in Resources */ = {isa = PBXBuildFile; fileRef = 88EF882B23338E8C00F34B04 /* muli */; };
 		88EF882E2333BFD100F34B04 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EF882D2333BFD100F34B04 /* SignUpViewController.swift */; };
 		94183335236A43ED00BF6D09 /* deal4dealsplash.gif in Resources */ = {isa = PBXBuildFile; fileRef = 94183334236A43ED00BF6D09 /* deal4dealsplash.gif */; };
+		94183337236A44B400BF6D09 /* LaunchScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94183336236A44B400BF6D09 /* LaunchScreenVC.swift */; };
 		A0F9C2C54D6B192221735B00 /* Pods_Deal4DealTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BF78759AC4A6939FB0134D2 /* Pods_Deal4DealTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -166,6 +167,7 @@
 		88EF882D2333BFD100F34B04 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		9115E8B0246E034AAD58E1E4 /* Pods-Deal4DealTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Deal4DealTests.debug.xcconfig"; path = "Target Support Files/Pods-Deal4DealTests/Pods-Deal4DealTests.debug.xcconfig"; sourceTree = "<group>"; };
 		94183334236A43ED00BF6D09 /* deal4dealsplash.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = deal4dealsplash.gif; sourceTree = "<group>"; };
+		94183336236A44B400BF6D09 /* LaunchScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenVC.swift; sourceTree = "<group>"; };
 		9BF78759AC4A6939FB0134D2 /* Pods_Deal4DealTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Deal4DealTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6B932B4337B1038DDB03DFC /* Pods-Deal4DealUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Deal4DealUITests.release.xcconfig"; path = "Target Support Files/Pods-Deal4DealUITests/Pods-Deal4DealUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C7B00DBE3D6696630A545F73 /* Pods-Deal4DealUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Deal4DealUITests.debug.xcconfig"; path = "Target Support Files/Pods-Deal4DealUITests/Pods-Deal4DealUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -321,6 +323,7 @@
 				8839705E234E12970044F089 /* FilterHomeCollectionViewCell.swift */,
 				880290F9234F3FCC00FB9282 /* WinnerTableViewCell.swift */,
 				880290FA234F3FCC00FB9282 /* WinnerTableViewCell.xib */,
+				94183336236A44B400BF6D09 /* LaunchScreenVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -711,6 +714,7 @@
 				8839705B234DEAC00044F089 /* HomeViewController.swift in Sources */,
 				883911C123463DDB006799C6 /* InviteFriendViewController.swift in Sources */,
 				88511C152369BDD100348356 /* HomeCells.swift in Sources */,
+				94183337236A44B400BF6D09 /* LaunchScreenVC.swift in Sources */,
 				88E6FE14234B2AFD00FE6A65 /* OrderTableViewCell.swift in Sources */,
 				88056964234A005100862910 /* RateAppViewController.swift in Sources */,
 				884E62A5236042F70019F8C6 /* LoaderFACAD.swift in Sources */,
