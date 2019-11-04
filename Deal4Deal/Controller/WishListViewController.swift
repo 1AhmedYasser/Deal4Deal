@@ -7,27 +7,49 @@
 //
 
 import UIKit
+import AnimatableReload
+import EmptyDataSet_Swift
 
-class WishListViewController: UIViewController,UITableViewDataSource , UITableViewDelegate {
+class WishListViewController: UIViewController {
   
-    @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var wishlistCollectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       tableView.register(UINib(nibName: "MainCell", bundle: nil)
-        , forCellReuseIdentifier: "MainCell")
+     //   showEmptyResultMessage(show: true)
+        wishlistCollectionView.register(UINib(nibName: "CampaignCell", bundle: .main),forCellWithReuseIdentifier: "CampaignCell")
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        AnimatableReload.reload(collectionView: self.wishlistCollectionView, animationDirection: "down")
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MainCell", for: indexPath) as! MainCell
-        return cell
+    func showEmptyResultMessage(show: Bool) {
+        if show {
+            wishlistCollectionView.emptyDataSetView { (view) in
+                view.image(UIImage(named: "EmptyHeart")).detailLabelString(NSAttributedString(string: "You have no items in your wishlist")).shouldFadeIn(true).verticalSpace(63)
+            }
+        }else {
+            wishlistCollectionView.emptyDataSetView { (view) in
+                view.detailLabelString(NSAttributedString(string: ""))
+                
+            }
+        }
     }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 360
-    }
+}
 
+extension WishListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 7
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let wishCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CampaignCell", for: indexPath) as! CampaignCell
+        return wishCell
+    }
+    
+    
+    
 }

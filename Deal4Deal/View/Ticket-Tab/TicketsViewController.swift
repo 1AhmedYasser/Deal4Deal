@@ -17,7 +17,7 @@ class TicketsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         flowLayout.minimumLineSpacing = 25
-      // showEmptyResultMessage(show: true)
+    //   showEmptyResultMessage(show: true)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -28,7 +28,7 @@ class TicketsViewController: UIViewController {
     func showEmptyResultMessage(show: Bool) {
         if show {
             collectionView.emptyDataSetView { (view) in
-                view.image(UIImage(named: "Ticket-Active")).detailLabelString(NSAttributedString(string: "you can see your active tickets here after you have made a purchase")).shouldFadeIn(true).verticalSpace(50)
+                view.image(UIImage(named: "Ticket-Active")).detailLabelString(NSAttributedString(string: "you can see your active tickets here after you have made a purchase")).shouldFadeIn(true).verticalSpace(51.4)
             }
         }else {
             collectionView.emptyDataSetView { (view) in

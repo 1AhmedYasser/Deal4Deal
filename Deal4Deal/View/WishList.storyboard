@@ -27,60 +27,71 @@
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="QSg-Zg-H8I" kind="relationship" relationship="rootViewController" id="pFu-Q9-ArH"/>
+                        <segue destination="ZPf-p6-T33" kind="relationship" relationship="rootViewController" id="z4l-fX-RJM"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pOC-GS-3lY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-484" y="120"/>
+            <point key="canvasLocation" x="-455" y="135"/>
         </scene>
-        <!--Wish List-->
-        <scene sceneID="Tjo-3X-9ez">
+        <!--Wishlist-->
+        <scene sceneID="85i-dU-E64">
             <objects>
-                <viewController id="QSg-Zg-H8I" customClass="WishListViewController" customModule="Deal4Deal" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="9wK-dY-1m9">
+                <viewController id="ZPf-p6-T33" customClass="WishListViewController" customModule="Deal4Deal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nfD-Hb-W18">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yDH-At-1W2">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rcr-X8-Jqn">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ysk-jq-MWs">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ysk-jq-MWs" id="PYN-tK-QVf">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="33" minimumInteritemSpacing="20" id="WGl-H7-hNb">
+                                    <size key="itemSize" width="323" height="329"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="20" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CampaignCell" id="9E7-LZ-m61" customClass="CampaignCell" customModule="Deal4Deal" customModuleProvider="target">
+                                        <rect key="frame" x="45.5" y="20" width="323" height="329"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="323" height="329"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
                                 <connections>
-                                    <outlet property="dataSource" destination="QSg-Zg-H8I" id="lKc-4E-2J8"/>
-                                    <outlet property="delegate" destination="QSg-Zg-H8I" id="3sF-ce-KHI"/>
+                                    <outlet property="dataSource" destination="ZPf-p6-T33" id="pGP-OE-zhO"/>
+                                    <outlet property="delegate" destination="ZPf-p6-T33" id="Ytc-HN-6dc"/>
                                 </connections>
-                            </tableView>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="yDH-At-1W2" firstAttribute="top" secondItem="bE6-kg-KaQ" secondAttribute="top" id="QGS-x9-U2E"/>
-                            <constraint firstItem="yDH-At-1W2" firstAttribute="bottom" secondItem="bE6-kg-KaQ" secondAttribute="bottom" id="dU6-4z-ZfQ"/>
-                            <constraint firstItem="yDH-At-1W2" firstAttribute="leading" secondItem="bE6-kg-KaQ" secondAttribute="leading" id="eX9-3i-VnB"/>
-                            <constraint firstItem="yDH-At-1W2" firstAttribute="trailing" secondItem="bE6-kg-KaQ" secondAttribute="trailing" id="ywZ-Uv-1pP"/>
+                            <constraint firstItem="rcr-X8-Jqn" firstAttribute="leading" secondItem="J3B-Tv-GR5" secondAttribute="leading" id="2w4-gf-GQx"/>
+                            <constraint firstItem="rcr-X8-Jqn" firstAttribute="top" secondItem="J3B-Tv-GR5" secondAttribute="top" id="7Fl-GK-9DE"/>
+                            <constraint firstItem="rcr-X8-Jqn" firstAttribute="bottom" secondItem="J3B-Tv-GR5" secondAttribute="bottom" id="MY1-ej-yJ0"/>
+                            <constraint firstItem="rcr-X8-Jqn" firstAttribute="trailing" secondItem="J3B-Tv-GR5" secondAttribute="trailing" id="PUX-oL-Icd"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="bE6-kg-KaQ"/>
+                        <viewLayoutGuide key="safeArea" id="J3B-Tv-GR5"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Wish List" id="846-rm-8Nh"/>
+                    <navigationItem key="navigationItem" title="Wishlist" id="PEQ-li-mWR">
+                        <barButtonItem key="rightBarButtonItem" image="notifications" id="zyC-ps-JsU">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="tableView" destination="yDH-At-1W2" id="uXc-Bk-kJa"/>
+                        <outlet property="wishlistCollectionView" destination="rcr-X8-Jqn" id="tkk-y1-U3n"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9rQ-8w-7kf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="drf-Sc-ar7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="218.84057971014494" y="134.59821428571428"/>
+            <point key="canvasLocation" x="266.66666666666669" y="134.59821428571428"/>
         </scene>
     </scenes>
     <resources>
-        <image name="heart" width="18" height="16.5"/>
+        <image name="heart" width="18.5" height="17"/>
+        <image name="notifications" width="22" height="26"/>
     </resources>
 </document>

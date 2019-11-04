@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ENo-oE-1KW">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ENo-oE-1KW">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -32,7 +34,7 @@
             </objects>
             <point key="canvasLocation" x="-484" y="120"/>
         </scene>
-        <!--CART-->
+        <!--Cart-->
         <scene sceneID="Nzi-rZ-oA0">
             <objects>
                 <viewController id="ruX-CK-bu9" sceneMemberID="viewController">
@@ -42,7 +44,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="dbi-8B-sfT"/>
                     </view>
-                    <navigationItem key="navigationItem" title="CART" id="8Kz-cy-bB6"/>
+                    <navigationItem key="navigationItem" title="Cart" id="8Kz-cy-bB6">
+                        <barButtonItem key="rightBarButtonItem" image="notifications" id="n2z-tH-cZb">
+                            <color key="tintColor" red="0.96852236989999996" green="0.96868795159999999" blue="0.96851199870000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MaM-zx-W3o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -51,5 +57,6 @@
     </scenes>
     <resources>
         <image name="cart" width="19" height="18.5"/>
+        <image name="notifications" width="22" height="26"/>
     </resources>
 </document>

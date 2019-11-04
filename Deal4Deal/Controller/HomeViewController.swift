@@ -14,11 +14,16 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var sliderCollectionView: UICollectionView!
     @IBOutlet weak var campaignCollectionView: UICollectionView!
     @IBOutlet weak var CampaignItemsCollectionView: UICollectionView!
-    @IBOutlet weak var homeScroller: UIScrollView!
+    
+    // Campaign Titles
+    let campaignsTitles = ["Open","Soon","Sold","Winners"]
+    let campaignTitlesDescriptions = ["Hundreds of\nwinners\nand growing!","Get free ipoints on\nevery purchase you\nmake","Earn 100 ipoints\nand start\nshopping!"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        homeScroller.contentSize.height = 1.0
         campaignCollectionView.allowsMultipleSelection = false
+        CampaignItemsCollectionView.register(UINib(nibName: "CampaignCell", bundle: .main),forCellWithReuseIdentifier: "CampaignCell")
+
     }
     
 }
@@ -34,7 +39,11 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         if collectionView == sliderCollectionView {
           return 3
         } else {
-          return 4
+            if collectionView == CampaignItemsCollectionView {
+                return campaignsTitles.count
+            } else {
+                return 4
+            }
         }
     }
     
@@ -42,29 +51,40 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         if collectionView == sliderCollectionView {
         let sliderCell = collectionView.dequeueReusableCell(withReuseIdentifier: "SliderCell", for: indexPath) as! SliderCell
         sliderCell.sliderImage.image = UIImage(named: "home-slider\(indexPath.row + 1)")
+            let sliderText = NSMutableAttributedString(string: campaignTitlesDescriptions[indexPath.row])
+            let paragraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.lineSpacing = 5
+            sliderText.addAttribute(.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, sliderText.length))
+            sliderText.addAttribute(.foregroundColor, value: UIColor.white, range: NSMakeRange(0, sliderText.length))
+           sliderCell.sliderText.attributedText = sliderText
         return sliderCell
         } else if collectionView == campaignCollectionView {
-         let campaignCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CampaignCell", for: indexPath) as! CampaignCell
-        
-         return campaignCell
+         let campaignTitleCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CampaignTitleCell", for: indexPath) as! CampaignTitleCell
+
+         campaignTitleCell.campaignLabel.text = campaignsTitles[indexPath.row]
+         return campaignTitleCell
         } else {
-          let campaignItemCell = CampaignItemsCollectionView.dequeueReusableCell(withReuseIdentifier: "CampaignItemCell", for: indexPath)
-            return campaignItemCell
+          let campaignCell = CampaignItemsCollectionView.dequeueReusableCell(withReuseIdentifier: "CampaignCell", for: indexPath) as! CampaignCell
+            return campaignCell
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == campaignCollectionView {
-            let cell = collectionView.cellForItem(at: indexPath) as! CampaignCell
+            let cell = collectionView.cellForItem(at: indexPath) as! CampaignTitleCell
             cell.layer.borderColor = UIColor.red.cgColor
             cell.layer.borderWidth = 1
             cell.campaignLabel.textColor = UIColor.red
+        }
+        
+        if collectionView == CampaignItemsCollectionView {
+            print("hi")
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         if collectionView == campaignCollectionView {
-            let cell = collectionView.cellForItem(at: indexPath) as! CampaignCell
+            let cell = collectionView.cellForItem(at: indexPath) as! CampaignTitleCell
             cell.layer.borderWidth = 0
             cell.campaignLabel.textColor = UIColor.gray
         }

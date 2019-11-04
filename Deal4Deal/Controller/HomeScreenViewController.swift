@@ -8,20 +8,20 @@
 
 import UIKit
 import XLPagerTabStrip
-import Tabman
-import Pageboy
 
 class HomeScreenViewController: ButtonBarPagerTabStripViewController {
     
     @IBOutlet weak var navBar: ButtonBarView!
     @IBOutlet weak var videoView: VideoView!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         self.loadDesign()
         super.viewDidLoad()
-//        videoView.configure(url:   "http://deal4deal.ae/deal4deal_backend/public/videos/Mov_bbb.mp4")
-//        videoView.isLoop = true
-//        videoView.play()
+        scrollView.contentSize.width = 1.0
+        videoView.configure(url: "http://deal4deal.ae/deal4deal_backend/public/videos/Mov_bbb.mp4")
+        videoView.isLoop = true
+        videoView.play()
         
     }
     

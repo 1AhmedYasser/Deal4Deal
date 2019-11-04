@@ -15,8 +15,8 @@ target 'Deal4Deal' do
     pod 'NVActivityIndicatorView'
     pod 'AnimatableReload'
     pod 'EmptyDataSet-Swift'
-    pod 'Tabman', '~> 2.6'
     pod 'XLPagerTabStrip'
+    pod 'Toast-Swift'
 
   target 'Deal4DealTests' do
     inherit! :search_paths
